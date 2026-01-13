@@ -1,0 +1,861 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MixxxControllerPreset schemaVersion="1" mixxxVersion="2.4+">
+    <info>
+        <name>Novation Twitch (Complete)</name>
+        <author>Sohail</author>
+        <description>Complete vanilla JavaScript mapping with advanced features: slicer mode, FaderFX, sampler mode, touch strips, and full LED feedback. Supports hot cues, auto loop, loop roll, and comprehensive shift functions.</description>
+        <wiki>https://github.com/mixxxdj/mixxx/wiki/Novation%20Twitch</wiki>
+        <forums>https://mixxx.discourse.group/</forums>
+    </info>
+    <controller id="Novation Twitch">
+        <scriptfiles>
+            <file filename="midi-components-0.0.js"/>
+            <file functionprefix="NovationTwitch" filename="Novation_Twitch.js"/>
+        </scriptfiles>
+        <controls>
+            <!-- ============================================== -->
+            <!-- DECK A (Left Side) - MIDI Channel 8 (0x97/0xB7) -->
+            <!-- ============================================== -->
+            
+            <!-- Central Deck Buttons -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.playButton.input</key>
+                <description>Play/Pause</description>
+                <status>0x97</status>
+                <midino>0x17</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.cueButton.input</key>
+                <description>Cue</description>
+                <status>0x97</status>
+                <midino>0x16</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.syncButton.input</key>
+                <description>Sync / Auto</description>
+                <status>0x97</status>
+                <midino>0x13</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.keyLockButton.input</key>
+                <description>Keylock / Quantize (shifted)</description>
+                <status>0x97</status>
+                <midino>0x12</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.setButton.input</key>
+                <description>Set/Clr - Beatgrid translate / BPM Tap (shifted)</description>
+                <status>0x97</status>
+                <midino>0x10</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.adjustButton.input</key>
+                <description>Adjust/Slip - Beatgrid align / Slip mode (shifted)</description>
+                <status>0x97</status>
+                <midino>0x11</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.shiftButton</key>
+                <description>SHIFT button</description>
+                <status>0x97</status>
+                <midino>0x00</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.pflButton.input</key>
+                <description>PFL / Headphone Cue</description>
+                <status>0x97</status>
+                <midino>0x0A</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.faderFXButton1</key>
+                <description>FaderFX Toggle / Deck A/C (Shift)</description>
+                <status>0x97</status>
+                <midino>0x0D</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Encoders -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.pitchEncoder.input</key>
+                <description>Pitch Encoder - Rate / Pitch key (shifted)</description>
+                <status>0xB7</status>
+                <midino>0x03</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.pitchEncoderButton.input</key>
+                <description>Pitch Encoder Push - Tempo rate / Reset key (shifted)</description>
+                <status>0x97</status>
+                <midino>0x03</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.FXEncoder.input</key>
+                <description>FX Encoder - QuickEffect / Beatgrid (shifted)</description>
+                <status>0xB7</status>
+                <midino>0x06</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.FXEncoderButton.input</key>
+                <description>FX Encoder Push - Sync Key / Reset Key (shifted)</description>
+                <status>0x97</status>
+                <midino>0x06</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Pots -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.trimPot.input</key>
+                <description>Trim / Gain</description>
+                <status>0xB7</status>
+                <midino>0x09</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>NovationTwitch.deck1.eqHighPot.input</key>
+                <description>EQ High</description>
+                <status>0xB7</status>
+                <midino>0x48</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>NovationTwitch.deck1.eqMidPot.input</key>
+                <description>EQ Mid</description>
+                <status>0xB7</status>
+                <midino>0x47</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>NovationTwitch.deck1.eqLowPot.input</key>
+                <description>EQ Low</description>
+                <status>0xB7</status>
+                <midino>0x46</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Fader -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.volumeFader.input</key>
+                <description>Volume Fader</description>
+                <status>0xB7</status>
+                <midino>0x07</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Touch Strip -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripAbsPos.inputLSB</key>
+                <description>Touch Strip Absolute Position LSB</description>
+                <status>0xB7</status>
+                <midino>0x34</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripAbsPos.inputMSB</key>
+                <description>Touch Strip Absolute Position MSB</description>
+                <status>0xB7</status>
+                <midino>0x14</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripRel</key>
+                <description>Touch Strip Relative/Incremental</description>
+                <status>0xB7</status>
+                <midino>0x35</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripPinch.input</key>
+                <description>Touch Strip Pinch Gesture</description>
+                <status>0xB7</status>
+                <midino>0x37</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripTouch.input</key>
+                <description>Touch Strip Touch Detection</description>
+                <status>0x97</status>
+                <midino>0x47</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripSelector.input</key>
+                <description>SWIPE Button</description>
+                <status>0x97</status>
+                <midino>0x14</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.touchStripSelector.input</key>
+                <description>DROP Button</description>
+                <status>0x97</status>
+                <midino>0x15</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Performance Mode Selector -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performanceSelector.input</key>
+                <description>Hot Cues Mode</description>
+                <status>0x97</status>
+                <midino>0x38</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performanceSelector.input</key>
+                <description>Slicer Mode</description>
+                <status>0x97</status>
+                <midino>0x39</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performanceSelector.input</key>
+                <description>Auto Loop Mode</description>
+                <status>0x97</status>
+                <midino>0x3A</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performanceSelector.input</key>
+                <description>Loop Roll Mode</description>
+                <status>0x97</status>
+                <midino>0x3B</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Performance Pads -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad1.input</key>
+                <description>Pad 1</description>
+                <status>0x97</status>
+                <midino>0x3C</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad2.input</key>
+                <description>Pad 2</description>
+                <status>0x97</status>
+                <midino>0x3D</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad3.input</key>
+                <description>Pad 3</description>
+                <status>0x97</status>
+                <midino>0x3E</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad4.input</key>
+                <description>Pad 4</description>
+                <status>0x97</status>
+                <midino>0x3F</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad5.input</key>
+                <description>Pad 5</description>
+                <status>0x97</status>
+                <midino>0x40</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad6.input</key>
+                <description>Pad 6</description>
+                <status>0x97</status>
+                <midino>0x41</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad7.input</key>
+                <description>Pad 7</description>
+                <status>0x97</status>
+                <midino>0x42</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.performancePad8.input</key>
+                <description>Pad 8</description>
+                <status>0x97</status>
+                <midino>0x43</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Load A Button -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NovationTwitch.deck1.loadButton.input</key>
+                <description>Load A</description>
+                <status>0x97</status>
+                <midino>0x52</midino>
+                <options><script-binding/></options>
+            </control>
+
+            <!-- ============================================== -->
+            <!-- DECK B (Right Side) - MIDI Channel 9 (0x98/0xB8) -->
+            <!-- ============================================== -->
+            
+            <!-- Central Deck Buttons -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.playButton.input</key>
+                <description>Play/Pause</description>
+                <status>0x98</status>
+                <midino>0x17</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.cueButton.input</key>
+                <description>Cue</description>
+                <status>0x98</status>
+                <midino>0x16</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.syncButton.input</key>
+                <description>Sync / Auto</description>
+                <status>0x98</status>
+                <midino>0x13</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.keyLockButton.input</key>
+                <description>Keylock / Quantize (shifted)</description>
+                <status>0x98</status>
+                <midino>0x12</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.setButton.input</key>
+                <description>Set/Clr</description>
+                <status>0x98</status>
+                <midino>0x10</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.adjustButton.input</key>
+                <description>Adjust/Slip</description>
+                <status>0x98</status>
+                <midino>0x11</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.shiftButton</key>
+                <description>SHIFT button</description>
+                <status>0x98</status>
+                <midino>0x00</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.pflButton.input</key>
+                <description>PFL / Headphone Cue</description>
+                <status>0x98</status>
+                <midino>0x0A</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.faderFXButton2</key>
+                <description>FaderFX Toggle / Deck B/D (Shift)</description>
+                <status>0x98</status>
+                <midino>0x0D</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Encoders -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.pitchEncoder.input</key>
+                <description>Pitch Encoder</description>
+                <status>0xB8</status>
+                <midino>0x03</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.pitchEncoderButton.input</key>
+                <description>Pitch Encoder Push</description>
+                <status>0x98</status>
+                <midino>0x03</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.FXEncoder.input</key>
+                <description>FX Encoder</description>
+                <status>0xB8</status>
+                <midino>0x06</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.FXEncoderButton.input</key>
+                <description>FX Encoder Push</description>
+                <status>0x98</status>
+                <midino>0x06</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Pots -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.trimPot.input</key>
+                <description>Trim / Gain</description>
+                <status>0xB8</status>
+                <midino>0x09</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>NovationTwitch.deck2.eqHighPot.input</key>
+                <description>EQ High</description>
+                <status>0xB8</status>
+                <midino>0x48</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>NovationTwitch.deck2.eqMidPot.input</key>
+                <description>EQ Mid</description>
+                <status>0xB8</status>
+                <midino>0x47</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>NovationTwitch.deck2.eqLowPot.input</key>
+                <description>EQ Low</description>
+                <status>0xB8</status>
+                <midino>0x46</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Fader -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.volumeFader.input</key>
+                <description>Volume Fader</description>
+                <status>0xB8</status>
+                <midino>0x07</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Touch Strip -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripAbsPos.inputLSB</key>
+                <description>Touch Strip Absolute Position LSB</description>
+                <status>0xB8</status>
+                <midino>0x34</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripAbsPos.inputMSB</key>
+                <description>Touch Strip Absolute Position MSB</description>
+                <status>0xB8</status>
+                <midino>0x14</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripRel</key>
+                <description>Touch Strip Relative</description>
+                <status>0xB8</status>
+                <midino>0x35</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripPinch.input</key>
+                <description>Touch Strip Pinch</description>
+                <status>0xB8</status>
+                <midino>0x37</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripTouch.input</key>
+                <description>Touch Strip Touch</description>
+                <status>0x98</status>
+                <midino>0x47</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripSelector.input</key>
+                <description>SWIPE Button</description>
+                <status>0x98</status>
+                <midino>0x14</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.touchStripSelector.input</key>
+                <description>DROP Button</description>
+                <status>0x98</status>
+                <midino>0x15</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Performance Mode Selector -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performanceSelector.input</key>
+                <description>Hot Cues Mode</description>
+                <status>0x98</status>
+                <midino>0x38</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performanceSelector.input</key>
+                <description>Slicer Mode</description>
+                <status>0x98</status>
+                <midino>0x39</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performanceSelector.input</key>
+                <description>Auto Loop Mode</description>
+                <status>0x98</status>
+                <midino>0x3A</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performanceSelector.input</key>
+                <description>Loop Roll Mode</description>
+                <status>0x98</status>
+                <midino>0x3B</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Performance Pads -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad1.input</key>
+                <description>Pad 1</description>
+                <status>0x98</status>
+                <midino>0x3C</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad2.input</key>
+                <description>Pad 2</description>
+                <status>0x98</status>
+                <midino>0x3D</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad3.input</key>
+                <description>Pad 3</description>
+                <status>0x98</status>
+                <midino>0x3E</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad4.input</key>
+                <description>Pad 4</description>
+                <status>0x98</status>
+                <midino>0x3F</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad5.input</key>
+                <description>Pad 5</description>
+                <status>0x98</status>
+                <midino>0x40</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad6.input</key>
+                <description>Pad 6</description>
+                <status>0x98</status>
+                <midino>0x41</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad7.input</key>
+                <description>Pad 7</description>
+                <status>0x98</status>
+                <midino>0x42</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.performancePad8.input</key>
+                <description>Pad 8</description>
+                <status>0x98</status>
+                <midino>0x43</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- Load B Button -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NovationTwitch.deck2.loadButton.input</key>
+                <description>Load B</description>
+                <status>0x97</status>
+                <midino>0x53</midino>
+                <options><script-binding/></options>
+            </control>
+
+            <!-- ============================================== -->
+            <!-- CROSSFADER - MIDI Channel 8 (0xB7) CC 8 -->
+            <!-- ============================================== -->
+            <control>
+                <group>[Master]</group>
+                <key>NovationTwitch.crossfader</key>
+                <description>Crossfader</description>
+                <status>0xB7</status>
+                <midino>0x08</midino>
+                <options><script-binding/></options>
+            </control>
+
+            <!-- ============================================== -->
+            <!-- MASTER FX SECTION - MIDI Channel 8 (0x97/0xB7) -->
+            <!-- ============================================== -->
+            
+            <!-- FX Pots -->
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>NovationTwitch.masterFX.depthPot</key>
+                <description>FX Depth</description>
+                <status>0xB7</status>
+                <midino>0x5B</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NovationTwitch.masterFX.modEncoder</key>
+                <description>FX Mod/X Encoder</description>
+                <status>0xB7</status>
+                <midino>0x5C</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NovationTwitch.masterFX.modEncoderPush</key>
+                <description>FX Mod/X Encoder Push (Toggle param2 mode)</description>
+                <status>0x97</status>
+                <midino>0x5C</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NovationTwitch.masterFX.beatsEncoder</key>
+                <description>FX Beats Encoder</description>
+                <status>0xB7</status>
+                <midino>0x5D</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>NovationTwitch.masterFX.beatsEncoderPush</key>
+                <description>FX Beats Encoder Push (Toggle effect unit)</description>
+                <status>0x97</status>
+                <midino>0x5D</midino>
+                <options><script-binding/></options>
+            </control>
+            
+            <!-- FX Buttons -->
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>NovationTwitch.masterFX.auxButton</key>
+                <description>FX Aux</description>
+                <status>0x97</status>
+                <midino>0x18</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>NovationTwitch.masterFX.deckAButton</key>
+                <description>FX Deck A</description>
+                <status>0x97</status>
+                <midino>0x19</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>NovationTwitch.masterFX.deckBButton</key>
+                <description>FX Deck B</description>
+                <status>0x97</status>
+                <midino>0x1A</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NovationTwitch.masterFX.selectLeft</key>
+                <description>FX Select Left</description>
+                <status>0x97</status>
+                <midino>0x1B</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NovationTwitch.masterFX.selectRight</key>
+                <description>FX Select Right</description>
+                <status>0x97</status>
+                <midino>0x1C</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>NovationTwitch.masterFX.onOffButton</key>
+                <description>FX On/Off</description>
+                <status>0x97</status>
+                <midino>0x1D</midino>
+                <options><script-binding/></options>
+            </control>
+
+            <!-- ============================================== -->
+            <!-- MIC / AUX SECTION - MIDI Channel 8 -->
+            <!-- ============================================== -->
+            <control>
+                <group>[Auxiliary1]</group>
+                <key>NovationTwitch.micAux.auxLevel</key>
+                <description>Aux Level</description>
+                <status>0xB7</status>
+                <midino>0x0C</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Auxiliary1]</group>
+                <key>NovationTwitch.micAux.auxButton</key>
+                <description>Aux PFL</description>
+                <status>0x97</status>
+                <midino>0x0B</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Auxiliary1]</group>
+                <key>NovationTwitch.micAux.auxOnOff</key>
+                <description>Aux On/Off</description>
+                <status>0x97</status>
+                <midino>0x0C</midino>
+                <options><script-binding/></options>
+            </control>
+
+            <!-- ============================================== -->
+            <!-- BROWSE SECTION - MIDI Channel 8 -->
+            <!-- ============================================== -->
+            <control>
+                <group>[Library]</group>
+                <key>NovationTwitch.browseEncoder</key>
+                <description>Browse Encoder</description>
+                <status>0xB7</status>
+                <midino>0x55</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>NovationTwitch.browseEncoderButton</key>
+                <description>Browse Encoder Push</description>
+                <status>0x97</status>
+                <midino>0x55</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>NovationTwitch.areaButton</key>
+                <description>Area Button (Switch Library Focus)</description>
+                <status>0x97</status>
+                <midino>0x50</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Master]</group>
+                <key>NovationTwitch.viewButton</key>
+                <description>View Button (Maximize Library / SHIFT: 4-deck view)</description>
+                <status>0x97</status>
+                <midino>0x51</midino>
+                <options><script-binding/></options>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>MoveLeft</key>
+                <description>Back Button</description>
+                <status>0x97</status>
+                <midino>0x54</midino>
+                <options><normal/></options>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>MoveRight</key>
+                <description>Fwd Button</description>
+                <status>0x97</status>
+                <midino>0x56</midino>
+                <options><normal/></options>
+            </control>
+
+            <!-- ============================================== -->
+            <!-- MASTER SECTION - MIDI Channel 8 -->
+            <!-- ============================================== -->
+            <!-- Note: The physical Master, Booth, and Headphone knobs are audio-only -->
+            <!-- They don't send MIDI, so they cannot be mapped -->
+
+        </controls>
+        <outputs/>
+    </controller>
+</MixxxControllerPreset>
