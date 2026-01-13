@@ -1,6 +1,9 @@
 # Novation Twitch Controller Mapping for Mixxx
 
-A complete, feature-rich controller mapping for the **Novation Twitch** DJ controller in **Mixxx 2.4+**, written entirely in vanilla JavaScript.
+[![Mixxx 2.5.4](https://img.shields.io/badge/Mixxx-2.5.4-blue.svg)](https://mixxx.org/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+A complete, feature-rich controller mapping for the **Novation Twitch** DJ controller for **Mixxx 2.5.4**, written entirely in vanilla JavaScript.
 
 ![Novation Twitch](https://github.com/mixxxdj/mixxx/wiki/media/hardware/novation_twitch.jpg)
 
@@ -32,7 +35,7 @@ This mapping provides a **complete rewrite** in vanilla JavaScript (no dependenc
 
 ### Requirements
 
-- **Mixxx 2.4 or later** (tested with Mixxx 2.6 beta)
+- **Mixxx 2.5.4**
 - **Novation Twitch** controller (firmware up to date)
 
 ### Manual Installation

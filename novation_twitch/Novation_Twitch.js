@@ -17,7 +17,7 @@
  *
  * ---
  *
- * Novation Twitch DJ Controller Mapping for Mixxx 2.4+
+ * Novation Twitch DJ Controller Mapping for Mixxx 2.5.4
  *
  * Complete mapping based on Novation Twitch Programmer's Reference Guide
  *
